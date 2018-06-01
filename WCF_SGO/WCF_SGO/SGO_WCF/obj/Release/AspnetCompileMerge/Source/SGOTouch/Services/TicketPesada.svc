@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SGO_WCF.SGOTouch.TicketPesada" CodeBehind="TicketPesada.svc.cs" %>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dd015074-8bef-47b0-aa38-2e53c9f31dec" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:63343/ServiceComprobanteVenta.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceComprobanteVenta.xsd" MetadataType="Schema" ID="435bce1a-ed60-41c6-bd1d-cc88d2a7f3cd" SourceId="1" SourceUrl="http://localhost:63343/ServiceComprobanteVenta.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceComprobanteVenta1.xsd" MetadataType="Schema" ID="ce0623a0-6a6b-4909-bf0b-9f25dd2c6864" SourceId="1" SourceUrl="http://localhost:63343/ServiceComprobanteVenta.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceComprobanteVenta.wsdl" MetadataType="Wsdl" ID="96a0fdaa-386b-43cf-8672-1965933d8edc" SourceId="1" SourceUrl="http://localhost:63343/ServiceComprobanteVenta.svc?wsdl" />
+    <MetadataFile FileName="ServiceComprobanteVenta2.xsd" MetadataType="Schema" ID="3d4b4c74-ce09-4470-973e-a4527024fcd1" SourceId="1" SourceUrl="http://localhost:63343/ServiceComprobanteVenta.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceComprobanteVenta.disco" MetadataType="Disco" ID="f7d02042-f6b5-4b82-840e-22cc5cea7a0f" SourceId="1" SourceUrl="http://localhost:63343/ServiceComprobanteVenta.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

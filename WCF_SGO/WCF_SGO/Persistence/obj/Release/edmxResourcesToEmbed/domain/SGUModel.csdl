@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SGUModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="vRazonSocial" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vCodigoTributario" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vDireccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vNombreComercial" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nEstado" Type="Int32" Nullable="false" />
+    <Property Name="IdUbigeo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="IdEmpresaSAP" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="idSociedadSAP" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Estacion">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdLocal" />
+      <PropertyRef Name="IdEstacion" />
+    </Key>
+    <Property Name="IdEmpresa" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IdLocal" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IdEstacion" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="vDescripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nEstado" Type="Int32" Nullable="false" />
+    <Property Name="nIdUsuarioMod" Type="Int32" Nullable="false" />
+    <Property Name="dFechaMod" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Jefatura">
+    <Key>
+      <PropertyRef Name="IdJefatura" />
+    </Key>
+    <Property Name="IdJefatura" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vDescripcion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="bEstado" Type="Boolean" />
+    <Property Name="nIdUsuario_Mod" Type="Int32" Nullable="false" />
+    <Property Name="dFecha_Mod" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="JefaturaCorreo">
+    <Key>
+      <PropertyRef Name="IdCorreo" />
+    </Key>
+    <Property Name="IdCorreo" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vIdJefatura" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nIdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="vTipo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Local">
+    <Key>
+      <PropertyRef Name="idLocal" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="idLocal" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="vDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="vDireccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IdEmpresa" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="nEstado" Type="Int32" />
+    <Property Name="IdUbigeo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="idLocalSGA" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="idLocalGrupoSam" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="idLocalConta" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="nTipoLocal" Type="Int32" />
+    <Property Name="Ruta_DBF_Canjes" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IdLocalSAP" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="vAliasLocalSAP" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="vRuta_DBF_Casino" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="vRuta_Movimiento_Casino" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="idLocalExistencia_SGA" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="vNombre_DBF_Casino" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IdLocalSAPStock" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="vRuta_Sorteo_Casino" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="IdMenu" />
+    </Key>
+    <Property Name="IdMenu" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IdSistema" Type="Int32" Nullable="false" />
+    <Property Name="idMenuPadre" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="vDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vNombreFormulario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nEstado" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NotCheckConnect">
+    <Key>
+      <PropertyRef Name="IdNotCheckConnect" />
+    </Key>
+    <Property Name="IdNotCheckConnect" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vNombre" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="vDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nEstado" Type="Int32" />
+    <Property Name="vObservacion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Opciones">
+    <Key>
+      <PropertyRef Name="IdOpcion" />
+    </Key>
+    <Property Name="IdOpcion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vNombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nEstado" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OpcionMenu">
+    <Key>
+      <PropertyRef Name="IdOpcionMenu" />
+    </Key>
+    <Property Name="IdOpcionMenu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdMenu" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="IdOpcion" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PermitsConnection">
+    <Key>
+      <PropertyRef Name="IdPermitsConnection" />
+    </Key>
+    <Property Name="IdPermitsConnection" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vNombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="vObservacion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="nEstado" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="IdRol" />
+    </Key>
+    <Property Name="IdRol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nEstado" Type="Int32" Nullable="false" />
+    <Property Name="IdRolPadre" Type="Int32" />
+    <Property Name="IdSistema" Type="Int32" />
+  </EntityType>
+  <EntityType Name="RolMenu">
+    <Key>
+      <PropertyRef Name="IdRolMenu" />
+    </Key>
+    <Property Name="IdMenu" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="IdRol" Type="Int32" />
+    <Property Name="IdRolMenu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Sistemas">
+    <Key>
+      <PropertyRef Name="IdSistema" />
+    </Key>
+    <Property Name="IdSistema" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vNombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="vDescripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="nEstado" Type="Int32" />
+    <Property Name="bOperacion" Type="Boolean" />
+    <Property Name="vResumen" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="vUrl" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="vImagen" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="nTipo" Type="Int32" />
+    <Property Name="bPortal" Type="Boolean" />
+    <Property Name="bAdmin" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Ubigeo">
+    <Key>
+      <PropertyRef Name="IdUbigeo" />
+    </Key>
+    <Property Name="IdUbigeo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="vDepartamento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vProvincia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vDistrito" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nEstado" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vCodTrabajador" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="vNombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vApePat" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vCorreo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="vUsuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nEstado" Type="Int32" Nullable="false" />
+    <Property Name="vApeMat" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="bCambioPassword" Type="Boolean" />
+    <Property Name="vIdJefatura" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="nIdUsuario_Mod" Type="Int32" />
+    <Property Name="dFecha_Mod" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="UsuarioEmpresa">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="idLocal" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="idLocal" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IdEmpresa" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsuarioEstacion">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdLocal" />
+      <PropertyRef Name="IdEstacion" />
+      <PropertyRef Name="nIdUsuario" />
+    </Key>
+    <Property Name="IdEmpresa" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IdLocal" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IdEstacion" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="nIdUsuario" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Establecimiento_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="Estacion" Type="Self.Estacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Estacion">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioEmpresa_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="UsuarioEmpresa" Type="Self.UsuarioEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="UsuarioEmpresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioEstacion_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="UsuarioEstacion" Type="Self.UsuarioEstacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="UsuarioEstacion">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_1">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="Local" Type="Self.Local" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Local">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_3">
+    <End Role="Ubigeo" Type="Self.Ubigeo" Multiplicity="0..1" />
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ubigeo">
+        <PropertyRef Name="IdUbigeo" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="IdUbigeo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Establecimiento_Local">
+    <End Role="Local" Type="Self.Local" Multiplicity="1" />
+    <End Role="Estacion" Type="Self.Estacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Local">
+        <PropertyRef Name="idLocal" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Estacion">
+        <PropertyRef Name="IdLocal" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Jefatura_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Jefatura" Type="Self.Jefatura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Jefatura">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JefaturaCorreo_Jefatura">
+    <End Role="Jefatura" Type="Self.Jefatura" Multiplicity="1" />
+    <End Role="JefaturaCorreo" Type="Self.JefaturaCorreo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jefatura">
+        <PropertyRef Name="IdJefatura" />
+      </Principal>
+      <Dependent Role="JefaturaCorreo">
+        <PropertyRef Name="vIdJefatura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JefaturaCorreo_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="JefaturaCorreo" Type="Self.JefaturaCorreo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="JefaturaCorreo">
+        <PropertyRef Name="nIdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioEmpresa_Local">
+    <End Role="Local" Type="Self.Local" Multiplicity="1" />
+    <End Role="UsuarioEmpresa" Type="Self.UsuarioEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Local">
+        <PropertyRef Name="idLocal" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="UsuarioEmpresa">
+        <PropertyRef Name="idLocal" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_2">
+    <End Role="Ubigeo" Type="Self.Ubigeo" Multiplicity="0..1" />
+    <End Role="Local" Type="Self.Local" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ubigeo">
+        <PropertyRef Name="IdUbigeo" />
+      </Principal>
+      <Dependent Role="Local">
+        <PropertyRef Name="IdUbigeo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_10">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="0..1" />
+    <End Role="RolMenu" Type="Self.RolMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="IdMenu" />
+      </Principal>
+      <Dependent Role="RolMenu">
+        <PropertyRef Name="IdMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_15">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="0..1" />
+    <End Role="OpcionMenu" Type="Self.OpcionMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="IdMenu" />
+      </Principal>
+      <Dependent Role="OpcionMenu">
+        <PropertyRef Name="IdMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_4">
+    <End Role="Sistemas" Type="Self.Sistemas" Multiplicity="1" />
+    <End Role="Menu" Type="Self.Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sistemas">
+        <PropertyRef Name="IdSistema" />
+      </Principal>
+      <Dependent Role="Menu">
+        <PropertyRef Name="IdSistema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_16">
+    <End Role="Opciones" Type="Self.Opciones" Multiplicity="0..1" />
+    <End Role="OpcionMenu" Type="Self.OpcionMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Opciones">
+        <PropertyRef Name="IdOpcion" />
+      </Principal>
+      <Dependent Role="OpcionMenu">
+        <PropertyRef Name="IdOpcion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rol_Sistemas">
+    <End Role="Sistemas" Type="Self.Sistemas" Multiplicity="0..1" />
+    <End Role="Rol" Type="Self.Rol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sistemas">
+        <PropertyRef Name="IdSistema" />
+      </Principal>
+      <Dependent Role="Rol">
+        <PropertyRef Name="IdSistema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_11">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="0..1" />
+    <End Role="RolMenu" Type="Self.RolMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="RolMenu">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioEmpresa_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="UsuarioEmpresa" Type="Self.UsuarioEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioEmpresa">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioEstacion_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="UsuarioEstacion" Type="Self.UsuarioEstacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioEstacion">
+        <PropertyRef Name="nIdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ApplicationDbContextSGU" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Empresa" EntityType="Self.Empresa" />
+    <EntitySet Name="Estacion" EntityType="Self.Estacion" />
+    <EntitySet Name="Jefatura" EntityType="Self.Jefatura" />
+    <EntitySet Name="JefaturaCorreo" EntityType="Self.JefaturaCorreo" />
+    <EntitySet Name="Local" EntityType="Self.Local" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" />
+    <EntitySet Name="NotCheckConnect" EntityType="Self.NotCheckConnect" />
+    <EntitySet Name="Opciones" EntityType="Self.Opciones" />
+    <EntitySet Name="OpcionMenu" EntityType="Self.OpcionMenu" />
+    <EntitySet Name="PermitsConnection" EntityType="Self.PermitsConnection" />
+    <EntitySet Name="Rol" EntityType="Self.Rol" />
+    <EntitySet Name="RolMenu" EntityType="Self.RolMenu" />
+    <EntitySet Name="Sistemas" EntityType="Self.Sistemas" />
+    <EntitySet Name="Ubigeo" EntityType="Self.Ubigeo" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <EntitySet Name="UsuarioEmpresa" EntityType="Self.UsuarioEmpresa" />
+    <EntitySet Name="UsuarioEstacion" EntityType="Self.UsuarioEstacion" />
+    <AssociationSet Name="FK_Establecimiento_Empresa" Association="Self.FK_Establecimiento_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Estacion" EntitySet="Estacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioEmpresa_Empresa" Association="Self.FK_UsuarioEmpresa_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="UsuarioEmpresa" EntitySet="UsuarioEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioEstacion_Empresa" Association="Self.FK_UsuarioEstacion_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="UsuarioEstacion" EntitySet="UsuarioEstacion" />
+    </AssociationSet>
+    <AssociationSet Name="R_1" Association="Self.R_1">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Local" EntitySet="Local" />
+    </AssociationSet>
+    <AssociationSet Name="R_3" Association="Self.R_3">
+      <End Role="Ubigeo" EntitySet="Ubigeo" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Establecimiento_Local" Association="Self.FK_Establecimiento_Local">
+      <End Role="Local" EntitySet="Local" />
+      <End Role="Estacion" EntitySet="Estacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Jefatura_Usuario" Association="Self.FK_Jefatura_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Jefatura" EntitySet="Jefatura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JefaturaCorreo_Jefatura" Association="Self.FK_JefaturaCorreo_Jefatura">
+      <End Role="Jefatura" EntitySet="Jefatura" />
+      <End Role="JefaturaCorreo" EntitySet="JefaturaCorreo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JefaturaCorreo_Usuario" Association="Self.FK_JefaturaCorreo_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="JefaturaCorreo" EntitySet="JefaturaCorreo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioEmpresa_Local" Association="Self.FK_UsuarioEmpresa_Local">
+      <End Role="Local" EntitySet="Local" />
+      <End Role="UsuarioEmpresa" EntitySet="UsuarioEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="R_2" Association="Self.R_2">
+      <End Role="Ubigeo" EntitySet="Ubigeo" />
+      <End Role="Local" EntitySet="Local" />
+    </AssociationSet>
+    <AssociationSet Name="R_10" Association="Self.R_10">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="RolMenu" EntitySet="RolMenu" />
+    </AssociationSet>
+    <AssociationSet Name="R_15" Association="Self.R_15">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="OpcionMenu" EntitySet="OpcionMenu" />
+    </AssociationSet>
+    <AssociationSet Name="R_4" Association="Self.R_4">
+      <End Role="Sistemas" EntitySet="Sistemas" />
+      <End Role="Menu" EntitySet="Menu" />
+    </AssociationSet>
+    <AssociationSet Name="R_16" Association="Self.R_16">
+      <End Role="Opciones" EntitySet="Opciones" />
+      <End Role="OpcionMenu" EntitySet="OpcionMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_Sistemas" Association="Self.FK_Rol_Sistemas">
+      <End Role="Sistemas" EntitySet="Sistemas" />
+      <End Role="Rol" EntitySet="Rol" />
+    </AssociationSet>
+    <AssociationSet Name="R_11" Association="Self.R_11">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="RolMenu" EntitySet="RolMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioEmpresa_Usuario" Association="Self.FK_UsuarioEmpresa_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="UsuarioEmpresa" EntitySet="UsuarioEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioEstacion_Usuario" Association="Self.FK_UsuarioEstacion_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="UsuarioEstacion" EntitySet="UsuarioEstacion" />
+    </AssociationSet>
+    <FunctionImport Name="usp_SelLocalIdEmpresaUsuario" ReturnType="Collection(SGUModel.SelLocalIdEmpresaUsuario)">
+      <Parameter Name="IdEmpresa" Mode="In" Type="String" />
+      <Parameter Name="IdUsuario" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_SelMenuConstruir" ReturnType="Collection(SGUModel.SelMenuConstruir)">
+      <Parameter Name="IdUsuario" Mode="In" Type="Int32" />
+      <Parameter Name="IdSistema" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_SelUsuarioLogin" EntitySet="Usuario" ReturnType="Collection(SGUModel.Usuario)">
+      <Parameter Name="vUsuario" Mode="In" Type="String" />
+      <Parameter Name="vpassword" Mode="In" Type="String" />
+      <Parameter Name="nIdSistema" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="SelMenuConstruir">
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <Property Type="String" Name="IdMenu" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="idMenuPadre" Nullable="true" MaxLength="5" />
+    <Property Type="Int32" Name="IdSistema" Nullable="false" />
+    <Property Type="String" Name="vDescripcion" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="vNombreFormulario" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="SelLocalIdEmpresaUsuario">
+    <Property Type="String" Name="idLocal" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="vDescripcion" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="vDireccion" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="IdEmpresa" Nullable="false" MaxLength="2" />
+    <Property Type="Int32" Name="nEstado" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SelUsuarioLogin">
+    <Property Type="Int32" Name="IdUSuario" Nullable="false" />
+    <Property Type="String" Name="vNombre" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="vApePat" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="vApeMat" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="vCorreo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="vUsuario" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="vPassword" Nullable="false" />
+    <Property Type="Int32" Name="nEstado" Nullable="false" />
+    <Property Type="Boolean" Name="bCambioPassword" Nullable="true" />
+    <Property Type="Int32" Name="IdRol" Nullable="false" />
+    <Property Type="Int32" Name="IdSistema" Nullable="true" />
+    <Property Type="String" Name="vDescripcion" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="vCodTrabajador" Nullable="false" MaxLength="6" />
+    <Property Type="String" Name="vIdJefatura" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="vDescripcionJefatura" Nullable="false" MaxLength="150" />
+    <Property Type="Int32" Name="nIdUsuario_Mod" Nullable="true" />
+    <Property Type="DateTime" Name="dFecha_Mod" Nullable="true" Precision="23" />
+  </ComplexType>
+</Schema>

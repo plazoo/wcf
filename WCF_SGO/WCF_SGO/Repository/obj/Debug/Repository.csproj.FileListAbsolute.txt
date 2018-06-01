@@ -1,0 +1,14 @@
+D:\Desarrollo\WCF_SGO\WCF_SGO\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
+D:\Desarrollo\WCF_SGO\WCF_SGO\Repository\bin\Debug\Repository.dll.config
+D:\Desarrollo\WCF_SGO\WCF_SGO\Repository\bin\Debug\Repository.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Repository\bin\Debug\Repository.pdb
+D:\Desarrollo\WCF_SGO\WCF_SGO\Repository\bin\Debug\EntityFramework.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Repository\bin\Debug\Persistence.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Repository\bin\Debug\Persistence.pdb
+D:\Desarrollo\WCF_SGO\WCF_SGO\Repository\bin\Debug\EntityFramework.xml
+D:\Desarrollo\WCF_SGO\WCF_SGO\Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\Desarrollo\WCF_SGO\WCF_SGO\Repository\obj\Debug\Repository.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Repository\obj\Debug\Repository.pdb
+D:\Desarrollo\WCF_SGO\WCF_SGO\Repository\bin\Debug\Newtonsoft.Json.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Repository\bin\Debug\Newtonsoft.Json.xml

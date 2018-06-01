@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="eaaae1a6d3884edab89172b6bda0a274" Name="SGODiagram" ZoomLevel="55">
+        <EntityTypeShape EntityType="SGOModel.CLIENTE" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGOModel.COMPROBANTE_VENTA_CAB" Width="2.125" PointX="0.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGOModel.COMPROBANTE_VENTA_DET" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGOModel.COMPROBANTEVENTA_FILE" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGOModel.COMPROBANTEVENTA_FILE_RESPONSE" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGOModel.COMPROBANTEVENTA_PROCESO" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGOModel.ERRORINVOICE" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGOModel.COMPROBANTEVENTA_APROBACION" Width="2.875" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGOModel.PARAMETRO" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="SGOModel.Fk_ComprobanteVenta_File_COMPROBANTE_VENTA_CAB" ManuallyRouted="false" />
+        <AssociationConnector Association="SGOModel.FK_ComprobanteVentaDet_ComprobanteVentaCab" ManuallyRouted="false" />
+        <AssociationConnector Association="SGOModel.PK_ComprobanteVentaProceso_ComprobanteVenta" ManuallyRouted="false" />
+        <AssociationConnector Association="SGOModel.Fk_ComprobanteVenta_File_ComprobanteVenta_File" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SGOModel.CERTIFICADO_VSP" Width="1.5" PointX="7.375" PointY="11.75" />
+        <EntityTypeShape EntityType="SGOModel.CLIENTE_BANCO" Width="1.5" PointX="10" PointY="30" />
+        <EntityTypeShape EntityType="SGOModel.CLIENTE_CERTIFICADO" Width="1.5" PointX="12" PointY="7" />
+        <EntityTypeShape EntityType="SGOModel.CLIENTE_CONTACTO" Width="1.5" PointX="10" PointY="34" />
+        <EntityTypeShape EntityType="SGOModel.GUIA_INGRESO_CAB" Width="1.5" PointX="10" PointY="20.125" />
+        <EntityTypeShape EntityType="SGOModel.GUIA_INGRESO_DET" Width="1.5" PointX="12.25" PointY="23" />
+        <EntityTypeShape EntityType="SGOModel.SERVICIO_PRP_CABECERA" Width="1.5" PointX="10" PointY="13" />
+        <EntityTypeShape EntityType="SGOModel.SERVICIO_PRP_DETALLE" Width="1.5" PointX="12.25" PointY="14.375" />
+        <EntityTypeShape EntityType="SGOModel.TBL_LOG" Width="1.5" PointX="12.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SGOModel.TRASLADO_DET" Width="1.5" PointX="14.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SGOModel.TRASLADO_CAB" Width="1.5" PointX="14.375" PointY="7.75" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_CERTIFICADO_CERTIFICADO_VSP" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_BANCO_CLIENTE" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_CERTIFICADO_CLIENTE" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_CONTACTO_CLIENTE" />
+        <AssociationConnector Association="SGOModel.FK_GUIA_INGRESO_CAB_CLIENTE" />
+        <AssociationConnector Association="SGOModel.FK_SERVICIO_PRP_CABECERA_CLIENTE" />
+        <AssociationConnector Association="SGOModel.FK_GUIA_INGRESO_DET_GUIA_INGRESO_CAB" />
+        <AssociationConnector Association="SGOModel.FK_SERVICIO_PRP_DETALLE_SERVICIO_PRP_CABECERA" />
+        <EntityTypeShape EntityType="SGOModel.TICKET_PESADA" Width="1.5" PointX="10" PointY="38.75" />
+        <AssociationConnector Association="SGOModel.FK_TICKET_PESADA_CLIENTE" />
+        <EntityTypeShape EntityType="SGOModel.AREA" Width="1.5" PointX="16.75" PointY="4.75" />
+        <EntityTypeShape EntityType="SGOModel.BANCO" Width="1.5" PointX="8.125" PointY="34.75" />
+        <EntityTypeShape EntityType="SGOModel.CAJACHICA" Width="1.5" PointX="27" PointY="0.75" />
+        <EntityTypeShape EntityType="SGOModel.CAJACHICA_CIERRE" Width="1.5" PointX="16.75" PointY="7.75" />
+        <EntityTypeShape EntityType="SGOModel.CAJACHICA_SALDO" Width="1.5" PointX="29.25" PointY="7.125" />
+        <EntityTypeShape EntityType="SGOModel.CAJACHICA_TIPODOCUMENTO" Width="1.5" PointX="0.75" PointY="18.75" />
+        <EntityTypeShape EntityType="SGOModel.CARGO" Width="1.5" PointX="8.125" PointY="38.875" />
+        <EntityTypeShape EntityType="SGOModel.CATALOGO_CUENTA_CONTABLE" Width="1.5" PointX="24.75" PointY="13.25" />
+        <EntityTypeShape EntityType="SGOModel.CBANCO_TRABAJADOR" Width="1.5" PointX="27" PointY="12.875" />
+        <EntityTypeShape EntityType="SGOModel.CERTIFICADO_SALDO" Width="1.5" PointX="29.75" PointY="1" />
+        <EntityTypeShape EntityType="SGOModel.CERTIFICADO_SALDO_HISTORY" Width="1.5" PointX="32" PointY="1.625" />
+        <EntityTypeShape EntityType="SGOModel.CIERRE_ANUAL" Width="1.5" PointX="10.375" PointY="82" />
+        <EntityTypeShape EntityType="SGOModel.CIERRE_CONTRATO" Width="1.5" PointX="12.625" PointY="91.75" />
+        <EntityTypeShape EntityType="SGOModel.CIERRE_GUIAINGRESO" Width="1.5" PointX="12.625" PointY="99.5" />
+        <EntityTypeShape EntityType="SGOModel.CIERRE_KARDEX" Width="1.5" PointX="12.625" PointY="68.25" />
+        <EntityTypeShape EntityType="SGOModel.CIERRE_LIQUIDACION" Width="1.5" PointX="12.625" PointY="74.375" />
+        <EntityTypeShape EntityType="SGOModel.CIERRE_OTORGADO" Width="1.5" PointX="12.625" PointY="58.625" />
+        <EntityTypeShape EntityType="SGOModel.CIERRE_SERVICIO" Width="1.5" PointX="12.625" PointY="84.25" />
+        <EntityTypeShape EntityType="SGOModel.CLIENTE_COSECHA" Width="1.5" PointX="2.75" PointY="18.75" />
+        <EntityTypeShape EntityType="SGOModel.CLIENTE_GARANTIA" Width="1.5" PointX="15.375" PointY="18" />
+        <EntityTypeShape EntityType="SGOModel.CLIENTE_LIMITE" Width="1.5" PointX="10.375" PointY="55.25" />
+        <EntityTypeShape EntityType="SGOModel.CLIENTEINHABILITADO" Width="1.5" PointX="21.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SGOModel.CONTRATO_COMPRA" Width="1.5" PointX="17.625" PointY="16.125" />
+        <EntityTypeShape EntityType="SGOModel.CONTRATO_COMPRA_HISTORICO" Width="1.5" PointX="0.75" PointY="22.75" />
+        <EntityTypeShape EntityType="SGOModel.CONTRATO_COMPRA_SWITCH" Width="1.5" PointX="19.875" PointY="29.25" />
+        <EntityTypeShape EntityType="SGOModel.CONTRATO_COMPRA_UNFIXED" Width="1.5" PointX="19.875" PointY="24.625" />
+        <EntityTypeShape EntityType="SGOModel.CONTRATO_COMPRA_ZONA" Width="1.5" PointX="12.625" PointY="27.75" />
+        <EntityTypeShape EntityType="SGOModel.CONTRATO_ZONA_OUT" Width="1.5" PointX="14.875" PointY="32.125" />
+        <EntityTypeShape EntityType="SGOModel.CONTRATO_ZONA_SWITCH" Width="1.5" PointX="14.875" PointY="37" />
+        <EntityTypeShape EntityType="SGOModel.CONTRATO_ZONA_UNFIXED" Width="1.5" PointX="14.875" PointY="27.125" />
+        <EntityTypeShape EntityType="SGOModel.CORREO" Width="1.5" PointX="18.75" PointY="4.75" />
+        <EntityTypeShape EntityType="SGOModel.CUENTA_BANCO" Width="1.5" PointX="24.75" PointY="6.125" />
+        <EntityTypeShape EntityType="SGOModel.DEPARTAMENTO" Width="1.5" PointX="16.75" PointY="1" />
+        <EntityTypeShape EntityType="SGOModel.DOCUMENTO_OPERACION" Width="1.5" PointX="20.375" PointY="21.125" />
+        <EntityTypeShape EntityType="SGOModel.ESTADO" Width="1.5" PointX="30" PointY="28" />
+        <EntityTypeShape EntityType="SGOModel.GASTO_APROBACION" Width="1.5" PointX="32.25" PointY="7.5" />
+        <EntityTypeShape EntityType="SGOModel.GASTO_CENTRO_COSTO" Width="1.5" PointX="2.75" PointY="22.75" />
+        <EntityTypeShape EntityType="SGOModel.GASTO_MOVILIDAD_CAB" Width="1.5" PointX="27" PointY="16.625" />
+        <EntityTypeShape EntityType="SGOModel.GASTO_MOVILIDAD_DET" Width="1.5" PointX="29.25" PointY="22.125" />
+        <EntityTypeShape EntityType="SGOModel.GASTO_PRP_CAB" Width="1.5" PointX="27" PointY="6.75" />
+        <EntityTypeShape EntityType="SGOModel.GASTO_PRP_DET" Width="1.5" PointX="29.25" PointY="15.375" />
+        <EntityTypeShape EntityType="SGOModel.GASTO_RECIBO_MOVILIDAD" Width="1.5" PointX="31.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SGOModel.GUIA_INGRESO_SALDO" Width="1.5" PointX="31.75" PointY="18.75" />
+        <EntityTypeShape EntityType="SGOModel.IDIOMA" Width="1.5" PointX="5.875" PointY="21.875" />
+        <EntityTypeShape EntityType="SGOModel.LABORATORIO" Width="1.5" PointX="22.625" PointY="20.25" />
+        <EntityTypeShape EntityType="SGOModel.LABORATORIO_DEFECTO" Width="1.5" PointX="24.875" PointY="27.125" />
+        <EntityTypeShape EntityType="SGOModel.LABORATORIO_REFERENCIA" Width="1.5" PointX="24.875" PointY="30.375" />
+        <EntityTypeShape EntityType="SGOModel.LIQUIDACION_COMPRA_CAB" Width="1.5" PointX="0.75" PointY="26.25" />
+        <EntityTypeShape EntityType="SGOModel.LIQUIDACION_COMPRA_DET" Width="1.5" PointX="3" PointY="28.875" />
+        <EntityTypeShape EntityType="SGOModel.LIQUIDACION_COMPRA_SALDO" Width="1.5" PointX="23.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SGOModel.MODULO_COMPARTIDO_USUARIO" Width="1.5" PointX="22.75" PointY="16.75" />
+        <EntityTypeShape EntityType="SGOModel.MOTIVO_VISITA" Width="1.5" PointX="32.25" PointY="36.5" />
+        <EntityTypeShape EntityType="SGOModel.ODCS_ESTADOS" Width="1.5" PointX="24.75" PointY="21.75" />
+        <EntityTypeShape EntityType="SGOModel.ODCS_HISTORICO" Width="1.5" PointX="2.75" PointY="25.75" />
+        <EntityTypeShape EntityType="SGOModel.ODCS_PROVEEDOR" Width="1.5" PointX="27.75" PointY="31.75" />
+        <EntityTypeShape EntityType="SGOModel.ORDEN_COMPRA_CAB" Width="1.5" PointX="2.75" PointY="32.75" />
+        <EntityTypeShape EntityType="SGOModel.ORDEN_COMPRA_DET" Width="1.5" PointX="4.75" PointY="32.75" />
+        <EntityTypeShape EntityType="SGOModel.OTORGADO_SALDO_INICIAL" Width="1.5" PointX="33.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SGOModel.OTORGADO_ZONA" Width="1.5" PointX="19.75" PointY="33.75" />
+        <EntityTypeShape EntityType="SGOModel.OTORGADO_ZONA_DET" Width="1.5" PointX="5.75" PointY="25.75" />
+        <EntityTypeShape EntityType="SGOModel.PRECIO_BOLSA" Width="1.5" PointX="19.875" PointY="7.5" />
+        <EntityTypeShape EntityType="SGOModel.PRECIO_DIA" Width="1.5" PointX="32.75" PointY="24.75" />
+        <EntityTypeShape EntityType="SGOModel.PROVINCIA" Width="1.5" PointX="19" PointY="1" />
+        <EntityTypeShape EntityType="SGOModel.REGION" Width="1.5" PointX="13.125" PointY="47.875" />
+        <EntityTypeShape EntityType="SGOModel.RESUMEN_COMPRA_CLIENTE" Width="1.5" PointX="24.75" PointY="33.75" />
+        <EntityTypeShape EntityType="SGOModel.RESUMEN_COMPRA_CLIENTE_DETALLE" Width="1.5" PointX="34.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SGOModel.RESUMEN_COMPRA_CLIENTE_DETALLE_TEMP" Width="1.5" PointX="34.75" PointY="5.75" />
+        <EntityTypeShape EntityType="SGOModel.RESUMEN_COMPRA_CLIENTE_TEMP" Width="1.5" PointX="34.75" PointY="20.75" />
+        <EntityTypeShape EntityType="SGOModel.SERVICIO_PRP_ELIMINADO" Width="1.5" PointX="34.75" PointY="25.75" />
+        <EntityTypeShape EntityType="SGOModel.SERVICIO_PRP_RESULTADO" Width="1.5" PointX="20.625" PointY="13" />
+        <EntityTypeShape EntityType="SGOModel.SITUACION_HIPOTECA" Width="1.5" PointX="13.125" PointY="44" />
+        <EntityTypeShape EntityType="SGOModel.SOLICITUD_VISITA" Width="1.5" PointX="34.5" PointY="30.25" />
+        <EntityTypeShape EntityType="SGOModel.TBL_ARCHIVO_CARGAMASIVA" Width="1.5" PointX="35.75" PointY="10.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_AGENTE" Width="1.5" PointX="15.375" PointY="65.375" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_ARBITRAJE" Width="1.5" PointX="15.375" PointY="62.5" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_BLACKLIST" Width="1.5" PointX="35.75" PointY="13.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_CAFE" Width="1.5" PointX="10.375" PointY="51.25" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_CAJA_CHICA_ZONA" Width="1.5" PointX="35.75" PointY="16.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_CALIDAD" Width="1.5" PointX="36.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_CALIDAD_LABORATORIO" Width="1.5" PointX="12.625" PointY="54.25" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_CALIDAD_PRECIO" Width="1.5" PointX="36.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_CAMBIO_OPERACION" Width="1.5" PointX="36.75" PointY="6.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_CLIENTE" Width="1.5" PointX="5.875" PointY="16" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_COMPRA" Width="1.5" PointX="15.375" PointY="56.375" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_COND_PAGO" Width="1.5" PointX="15.375" PointY="41.625" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_CONTROL_BASE" Width="1.5" PointX="15.375" PointY="68.25" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_COSECHA" Width="1.5" PointX="36.75" PointY="20.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_DEFECTO" Width="1.5" PointX="36.75" PointY="24.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_DESTINO" Width="1.5" PointX="15.375" PointY="50.5" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_DIFERENCIAL" Width="1.5" PointX="10.375" PointY="47.25" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_DOCUMENTO" Width="1.5" PointX="5.875" PointY="19" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_DSA" Width="1.5" PointX="15.375" PointY="71.25" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_ESTADO" Width="1.5" PointX="27.75" PointY="28.25" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_FIJADOR" Width="1.5" PointX="36.75" PointY="27.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_GARANTIA" Width="1.5" PointX="13.125" PointY="19.125" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_INMUEBLE" Width="1.5" PointX="13.125" PointY="41" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_MES_FIJACION" Width="1.5" PointX="17.625" PointY="12.125" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_MODALIDAD_OTORGADO" Width="1.5" PointX="36.75" PointY="30.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_MONEDA" Width="1.5" PointX="8.125" PointY="30.25" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_MOTIVO_OTORGADO" Width="1.5" PointX="36.75" PointY="33.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_ORIGEN" Width="1.5" PointX="5.875" PointY="5.125" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_PRECIO" Width="1.5" PointX="15.375" PointY="47.5" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_REGLAS_PESO" Width="1.5" PointX="15.375" PointY="44.5" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_RENDIMIENTO" Width="1.5" PointX="36.75" PointY="36.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_RUMA" Width="1.5" PointX="4.75" PointY="37.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_SACO" Width="1.5" PointX="8.125" PointY="42.125" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_SEGUNDA" Width="1.5" PointX="37.75" PointY="10.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_SERIE_COMPRA" Width="1.5" PointX="37.75" PointY="13.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_SERIE_VENTA" Width="1.5" PointX="37.75" PointY="16.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_SERVICIO" Width="1.5" PointX="26.75" PointY="37.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_TAZA" Width="1.5" PointX="22.625" PointY="37.125" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_TERMINO_ENTREGA" Width="1.5" PointX="15.375" PointY="59.5" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_TITULO_VALOR" Width="1.5" PointX="13.125" PointY="50.875" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_TRADER" Width="1.5" PointX="28.75" PointY="37.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_UNIDAD_MEDIDA" Width="1.5" PointX="15.375" PointY="53.5" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_VALUACION" Width="1.5" PointX="38.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SGOModel.TIPO_VISITA" Width="1.5" PointX="32.25" PointY="33.625" />
+        <EntityTypeShape EntityType="SGOModel.TRABAJADOR_PRP" Width="1.5" PointX="24.75" PointY="9.5" />
+        <EntityTypeShape EntityType="SGOModel.TRABAJADOR_PRP_JEFATURA" Width="1.5" PointX="38.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SGOModel.TRASLADO_CHOFER" Width="1.5" PointX="38.75" PointY="19.75" />
+        <EntityTypeShape EntityType="SGOModel.TRASLADO_EMPRESA" Width="1.5" PointX="38.75" PointY="24.75" />
+        <EntityTypeShape EntityType="SGOModel.TRASLADO_MOTIVO" Width="1.5" PointX="38.75" PointY="6.75" />
+        <EntityTypeShape EntityType="SGOModel.TRASLADO_SALDO" Width="1.5" PointX="38.75" PointY="29.75" />
+        <EntityTypeShape EntityType="SGOModel.TRASLADO_ZONA" Width="1.5" PointX="38.75" PointY="34.75" />
+        <EntityTypeShape EntityType="SGOModel.DISTRITO" Width="1.5" PointX="38.75" PointY="38.75" />
+        <EntityTypeShape EntityType="SGOModel.GUIA_INGRESO_CAB_BK" Width="1.5" PointX="39.75" PointY="9.75" />
+        <EntityTypeShape EntityType="SGOModel.GUIA_INGRESO_DET_BK" Width="1.5" PointX="30.75" PointY="39.75" />
+        <EntityTypeShape EntityType="SGOModel.GUIA_INGRESO_SALDO_BK" Width="1.5" PointX="32.75" PointY="39.75" />
+        <EntityTypeShape EntityType="SGOModel.ODCS_PROVEEDOR_BANCO" Width="1.5" PointX="34.75" PointY="39.75" />
+        <EntityTypeShape EntityType="SGOModel.OTORGADO_ZONA_BK" Width="1.5" PointX="40.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SGOModel.SERVICIO_PRP_CABECERA_BK" Width="1.5" PointX="0.75" PointY="40.75" />
+        <EntityTypeShape EntityType="SGOModel.tbl_prueba" Width="1.5" PointX="24.75" PointY="24.75" />
+        <EntityTypeShape EntityType="SGOModel.TICKET_PESADA_BK" Width="1.5" PointX="2.75" PointY="40.75" />
+        <EntityTypeShape EntityType="SGOModel.TRASLADO_DESPACHOCAFE" Width="1.5" PointX="4.75" PointY="40.75" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_BANCO_BANCO" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_CONTACTO_BANCO" />
+        <AssociationConnector Association="SGOModel.FK_CAJACHICA_IdCatalogoCuentaContable_CATALOGO_CUENTA_CONTABLE_IdCatalogoCuentaContable" />
+        <AssociationConnector Association="SGOModel.FK_CAJACHICA_IdCuentaBanco_CUENTA_BANCO_IdCuentaBanco" />
+        <AssociationConnector Association="SGOModel.FK_CAJACHICA_SALDO_IdCajaChica_CAJACHICA_IdCajaChica" />
+        <AssociationConnector Association="SGOModel.FK_CAJACHICA_SALDO_IdGasto_PRP_GASTO_PRP_CAB_IdGasto_PRP" />
+        <AssociationConnector Association="SGOModel.FK_CAJACHICA_SALDO_IdMovilidadCab_GASTO_MOVILIDAD_CAB_IdMovilidadCab" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_CONTACTO_CARGO" />
+        <AssociationConnector Association="SGOModel.FK_CBANCO_TRABAJADOR_IdTrabajador_TRABAJADOR_PRP_IdTrabajador" />
+        <AssociationConnector Association="SGOModel.FK_CERTIFICADO_SALDO_HISTORY_CERTIFICADO_SALDO" />
+        <AssociationConnector Association="SGOModel.FK__CIERRE_AN__IDCLI__2EF0D041" />
+        <AssociationConnector Association="SGOModel.FK__CIERRE_CO__IDCIE__3F27380A" />
+        <AssociationConnector Association="SGOModel.FK__CIERRE_GU__IDDET__48B0A244" />
+        <AssociationConnector Association="SGOModel.FK__CIERRE_KA__IDCIE__57F2E5D4" />
+        <AssociationConnector Association="SGOModel.FK__CIERRE_LI__IDCIE__4D755761" />
+        <AssociationConnector Association="SGOModel.FK__CIERRE_OT__IDCIE__532E30B7" />
+        <AssociationConnector Association="SGOModel.FK__CIERRE_SE__IDCIE__43EBED27" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_GARANTIA_CLIENTE" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_IDIOMA" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_LIMITE_CLIENTE" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_TIPO_CLIENTE" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_TIPO_DOCUMENTO" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_TIPO_ORIGEN" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_CLIENTE" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_ZONA_CLIENTE" />
+        <AssociationConnector Association="SGOModel.FK_LABORATORIO_CLIENTE" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_BANCO_TIPO_MONEDA" />
+        <AssociationConnector Association="SGOModel.FK__CLIENTE_G__IdTip__54F67D98" />
+        <AssociationConnector Association="SGOModel.FK__CLIENTE_G__IdTit__5402595F" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_GARANTIA_REGION" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_GARANTIA_SITUACION_HIPOTECA" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_GARANTIA_TIPO_INMUEBLE" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_GARANTIA_TIPO_MONEDA" />
+        <AssociationConnector Association="SGOModel.FK_CLIENTE_GARANTIA_TIPO_MONEDA1" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_SWITCH_CONTRATO_COMPRA" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_TIPO_AGENTE" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_TIPO_ARBITRAJE" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_TIPO_COMPRA" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_TIPO_COND_PAGO" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_TIPO_CONTROL_BASE" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_TIPO_DESTINO" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_TIPO_DIFERENCIAL" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_TIPO_DSA" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_TIPO_PRECIO" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_TIPO_REGLAS_PESO" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_TIPO_TERMINO_ENTREGA" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_TIPO_UNIDAD_MEDIDA" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_UNFIXED_CONTRATO_COMPRA" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_UNFIXED_TIPO_MES_FIJACION" />
+        <AssociationConnector Association="SGOModel.FK__CONTRATO___IdUni__7B1C2680" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_ZONA_TIPO_CAFE" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_ZONA_TIPO_COMPRA" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_COMPRA_ZONA_TIPO_PRECIO" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_ZONA_OUT_CONTRATO_COMPRA_ZONA" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_ZONA_SWITCH_CONTRATO_COMPRA_ZONA" />
+        <AssociationConnector Association="SGOModel.FK_CONTRATO_ZONA_UNFIXED_CONTRATO_COMPRA_ZONA" />
+        <AssociationConnector Association="SGOModel.FK_PROVINCIA_DEPARTAMENTO" />
+        <AssociationConnector Association="SGOModel.FK_LABORATORIO_DOCUMENTO_OPERACION" />
+        <AssociationConnector Association="SGOModel.FK__ESTADO__IdTipo__117F9D94" />
+        <AssociationConnector Association="SGOModel.FK__SOLICITUD__IdEst__1920BF5C" />
+        <AssociationConnector Association="SGOModel.FK__TIPO_VISI__IdEst__164452B1" />
+        <AssociationConnector Association="SGOModel.FK_MOTIVO_VISITA_ESTADO" />
+        <AssociationConnector Association="SGOModel.FK_GASTO_APROBACION_GASTO_MOVILIDAD_CAB" />
+        <AssociationConnector Association="SGOModel.FK_GASTO_APROBACION_GASTO_PRP_CAB" />
+        <AssociationConnector Association="SGOModel.FK_GASTO_MOVILIDAD_DET_GASTO_MOVILIDAD_CAB" />
+        <AssociationConnector Association="SGOModel.FK_GASTO_PRP_CAB_TRABAJADOR" />
+        <AssociationConnector Association="SGOModel.FK_GASTO_PRP_DET_IdGastoPRP_GASTO_PRP_CAB_IdGastoPRP" />
+        <AssociationConnector Association="SGOModel.FK_SERVICIO_PRP_RESULTADO_GUIA_INGRESO_CAB" />
+        <AssociationConnector Association="SGOModel.FK__LABORATOR__IdLab__7286E07F" />
+        <AssociationConnector Association="SGOModel.FK_LABORATORIO_DEFECTO_LABORATORIO" />
+        <AssociationConnector Association="SGOModel.FK_LABORATORIO_TIPO_CAFE" />
+        <AssociationConnector Association="SGOModel.FK_LABORATORIO_DEFECTO_TIPO_TAZA" />
+        <AssociationConnector Association="SGOModel.FK_LIQUIDACION_COMPRA_DET_LIQUIDACION_COMPRA_CAB" />
+        <AssociationConnector Association="SGOModel.FK_SOLICITUD_VISITA_MOTIVO_VISITA" />
+        <AssociationConnector Association="SGOModel.FK__PRECIO_BO__IdMes__7310F064" />
+        <AssociationConnector Association="SGOModel.FK_SERVICIO_PRP_RESULTADO_SERVICIO_PRP_CABECERA" />
+        <AssociationConnector Association="SGOModel.FK__SOLICITUD__IdTip__182C9B23" />
+        <AssociationConnector Association="SGOModel.FK_TICKET_PESADA_TIPO_SACO" />
+        <AssociationConnector Association="SGOModel.FK__TIPO_CALI__IdTip__4A43E4FB" />
+        <AssociationConnector Association="SGOModel.FK__TIPO_DIFE__IdMon__7933DE0E" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

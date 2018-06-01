@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DB_WCF">
+  <Items>
+    <LogicalFolder Name="Conexiones" Type="2" Sorted="true">
+      <Items />
+    </LogicalFolder>
+    <LogicalFolder Name="Consultas" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="usp_INS_TBL_LOG.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>usp_INS_TBL_LOG.sql</FullPath>
+        </FileNode>
+        <FileNode Name="usp_LisIdComprobanteCliente.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>usp_LisIdComprobanteCliente.sql</FullPath>
+        </FileNode>
+        <FileNode Name="usp_LisClienteExiste.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>usp_LisClienteExiste.sql</FullPath>
+        </FileNode>
+        <FileNode Name="usp_LisComprobanteCliente.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>usp_LisComprobanteCliente.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Varios" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/DB_WCF/DB_WCF", KYDAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DB_WCF", "DB_WCF\DB_WCF.ssmssqlproj", "{F79AE32E-83E2-481D-8C0F-58EC66738501}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/WCF_SGO/SQL\u0020Server/DB_WCF\u0022,\u0020WFJAAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName1 = DB_WCF\\DB_WCF.ssmssqlproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = DB_WCF\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Predeterminado|Default = Predeterminado|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F79AE32E-83E2-481D-8C0F-58EC66738501}.Predeterminado|Default.ActiveCfg = Predeterminado
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

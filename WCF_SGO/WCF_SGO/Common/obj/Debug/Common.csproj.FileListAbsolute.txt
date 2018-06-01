@@ -1,0 +1,14 @@
+D:\Desarrollo\WCF_SGO\WCF_SGO\Common\bin\Debug\Common.dll.config
+D:\Desarrollo\WCF_SGO\WCF_SGO\Common\bin\Debug\Common.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Common\bin\Debug\Common.pdb
+D:\Desarrollo\WCF_SGO\WCF_SGO\Common\bin\Debug\DotNetZip.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Common\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Common\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Common\bin\Debug\Persistence.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Common\bin\Debug\EntityFramework.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Common\bin\Debug\Persistence.pdb
+D:\Desarrollo\WCF_SGO\WCF_SGO\Common\bin\Debug\DotNetZip.xml
+D:\Desarrollo\WCF_SGO\WCF_SGO\Common\bin\Debug\EntityFramework.xml
+D:\Desarrollo\WCF_SGO\WCF_SGO\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\Desarrollo\WCF_SGO\WCF_SGO\Common\obj\Debug\Common.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Common\obj\Debug\Common.pdb

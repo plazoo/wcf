@@ -1,0 +1,12 @@
+D:\Desarrollo\WCF_SGO\WCF_SGO\Persistence\bin\Release\Persistence.dll.config
+D:\Desarrollo\WCF_SGO\WCF_SGO\Persistence\bin\Release\Persistence.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Persistence\bin\Release\Persistence.pdb
+D:\Desarrollo\WCF_SGO\WCF_SGO\Persistence\bin\Release\EntityFramework.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Persistence\bin\Release\EntityFramework.SqlServer.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Persistence\bin\Release\Newtonsoft.Json.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Persistence\bin\Release\EntityFramework.xml
+D:\Desarrollo\WCF_SGO\WCF_SGO\Persistence\bin\Release\EntityFramework.SqlServer.xml
+D:\Desarrollo\WCF_SGO\WCF_SGO\Persistence\bin\Release\Newtonsoft.Json.xml
+D:\Desarrollo\WCF_SGO\WCF_SGO\Persistence\obj\Release\Persistence.csprojResolveAssemblyReference.cache
+D:\Desarrollo\WCF_SGO\WCF_SGO\Persistence\obj\Release\Persistence.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\Persistence\obj\Release\Persistence.pdb

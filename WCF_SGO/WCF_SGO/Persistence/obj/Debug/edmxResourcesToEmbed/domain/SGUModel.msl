@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SGUModelStoreContainer" CdmEntityContainer="ApplicationDbContextSGU">
+    <EntitySetMapping Name="Empresa">
+      <EntityTypeMapping TypeName="SGUModel.Empresa">
+        <MappingFragment StoreEntitySet="Empresa">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="vRazonSocial" ColumnName="vRazonSocial" />
+          <ScalarProperty Name="vCodigoTributario" ColumnName="vCodigoTributario" />
+          <ScalarProperty Name="vDireccion" ColumnName="vDireccion" />
+          <ScalarProperty Name="vNombreComercial" ColumnName="vNombreComercial" />
+          <ScalarProperty Name="nEstado" ColumnName="nEstado" />
+          <ScalarProperty Name="IdUbigeo" ColumnName="IdUbigeo" />
+          <ScalarProperty Name="IdEmpresaSAP" ColumnName="IdEmpresaSAP" />
+          <ScalarProperty Name="idSociedadSAP" ColumnName="idSociedadSAP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estacion">
+      <EntityTypeMapping TypeName="SGUModel.Estacion">
+        <MappingFragment StoreEntitySet="Estacion">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdLocal" ColumnName="IdLocal" />
+          <ScalarProperty Name="IdEstacion" ColumnName="IdEstacion" />
+          <ScalarProperty Name="vDescripcion" ColumnName="vDescripcion" />
+          <ScalarProperty Name="nEstado" ColumnName="nEstado" />
+          <ScalarProperty Name="nIdUsuarioMod" ColumnName="nIdUsuarioMod" />
+          <ScalarProperty Name="dFechaMod" ColumnName="dFechaMod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jefatura">
+      <EntityTypeMapping TypeName="SGUModel.Jefatura">
+        <MappingFragment StoreEntitySet="Jefatura">
+          <ScalarProperty Name="IdJefatura" ColumnName="IdJefatura" />
+          <ScalarProperty Name="vDescripcion" ColumnName="vDescripcion" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="bEstado" ColumnName="bEstado" />
+          <ScalarProperty Name="nIdUsuario_Mod" ColumnName="nIdUsuario_Mod" />
+          <ScalarProperty Name="dFecha_Mod" ColumnName="dFecha_Mod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JefaturaCorreo">
+      <EntityTypeMapping TypeName="SGUModel.JefaturaCorreo">
+        <MappingFragment StoreEntitySet="JefaturaCorreo">
+          <ScalarProperty Name="IdCorreo" ColumnName="IdCorreo" />
+          <ScalarProperty Name="vIdJefatura" ColumnName="vIdJefatura" />
+          <ScalarProperty Name="nIdUsuario" ColumnName="nIdUsuario" />
+          <ScalarProperty Name="vTipo" ColumnName="vTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Local">
+      <EntityTypeMapping TypeName="SGUModel.Local">
+        <MappingFragment StoreEntitySet="Local">
+          <ScalarProperty Name="idLocal" ColumnName="idLocal" />
+          <ScalarProperty Name="vDescripcion" ColumnName="vDescripcion" />
+          <ScalarProperty Name="vDireccion" ColumnName="vDireccion" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="nEstado" ColumnName="nEstado" />
+          <ScalarProperty Name="IdUbigeo" ColumnName="IdUbigeo" />
+          <ScalarProperty Name="idLocalSGA" ColumnName="idLocalSGA" />
+          <ScalarProperty Name="idLocalGrupoSam" ColumnName="idLocalGrupoSam" />
+          <ScalarProperty Name="idLocalConta" ColumnName="idLocalConta" />
+          <ScalarProperty Name="nTipoLocal" ColumnName="nTipoLocal" />
+          <ScalarProperty Name="Ruta_DBF_Canjes" ColumnName="Ruta_DBF_Canjes" />
+          <ScalarProperty Name="IdLocalSAP" ColumnName="IdLocalSAP" />
+          <ScalarProperty Name="vAliasLocalSAP" ColumnName="vAliasLocalSAP" />
+          <ScalarProperty Name="vRuta_DBF_Casino" ColumnName="vRuta_DBF_Casino" />
+          <ScalarProperty Name="vRuta_Movimiento_Casino" ColumnName="vRuta_Movimiento_Casino" />
+          <ScalarProperty Name="idLocalExistencia_SGA" ColumnName="idLocalExistencia_SGA" />
+          <ScalarProperty Name="vNombre_DBF_Casino" ColumnName="vNombre_DBF_Casino" />
+          <ScalarProperty Name="IdLocalSAPStock" ColumnName="IdLocalSAPStock" />
+          <ScalarProperty Name="vRuta_Sorteo_Casino" ColumnName="vRuta_Sorteo_Casino" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menu">
+      <EntityTypeMapping TypeName="SGUModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
+          <ScalarProperty Name="IdSistema" ColumnName="IdSistema" />
+          <ScalarProperty Name="idMenuPadre" ColumnName="idMenuPadre" />
+          <ScalarProperty Name="vDescripcion" ColumnName="vDescripcion" />
+          <ScalarProperty Name="vNombreFormulario" ColumnName="vNombreFormulario" />
+          <ScalarProperty Name="nEstado" ColumnName="nEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotCheckConnect">
+      <EntityTypeMapping TypeName="SGUModel.NotCheckConnect">
+        <MappingFragment StoreEntitySet="NotCheckConnect">
+          <ScalarProperty Name="IdNotCheckConnect" ColumnName="IdNotCheckConnect" />
+          <ScalarProperty Name="vNombre" ColumnName="vNombre" />
+          <ScalarProperty Name="vDescripcion" ColumnName="vDescripcion" />
+          <ScalarProperty Name="nEstado" ColumnName="nEstado" />
+          <ScalarProperty Name="vObservacion" ColumnName="vObservacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Opciones">
+      <EntityTypeMapping TypeName="SGUModel.Opciones">
+        <MappingFragment StoreEntitySet="Opciones">
+          <ScalarProperty Name="IdOpcion" ColumnName="IdOpcion" />
+          <ScalarProperty Name="vDescripcion" ColumnName="vDescripcion" />
+          <ScalarProperty Name="vNombre" ColumnName="vNombre" />
+          <ScalarProperty Name="nEstado" ColumnName="nEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpcionMenu">
+      <EntityTypeMapping TypeName="SGUModel.OpcionMenu">
+        <MappingFragment StoreEntitySet="OpcionMenu">
+          <ScalarProperty Name="IdOpcionMenu" ColumnName="IdOpcionMenu" />
+          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
+          <ScalarProperty Name="IdOpcion" ColumnName="IdOpcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermitsConnection">
+      <EntityTypeMapping TypeName="SGUModel.PermitsConnection">
+        <MappingFragment StoreEntitySet="PermitsConnection">
+          <ScalarProperty Name="IdPermitsConnection" ColumnName="IdPermitsConnection" />
+          <ScalarProperty Name="vNombre" ColumnName="vNombre" />
+          <ScalarProperty Name="vObservacion" ColumnName="vObservacion" />
+          <ScalarProperty Name="nEstado" ColumnName="nEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rol">
+      <EntityTypeMapping TypeName="SGUModel.Rol">
+        <MappingFragment StoreEntitySet="Rol">
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="vDescripcion" ColumnName="vDescripcion" />
+          <ScalarProperty Name="nEstado" ColumnName="nEstado" />
+          <ScalarProperty Name="IdRolPadre" ColumnName="IdRolPadre" />
+          <ScalarProperty Name="IdSistema" ColumnName="IdSistema" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RolMenu">
+      <EntityTypeMapping TypeName="SGUModel.RolMenu">
+        <MappingFragment StoreEntitySet="RolMenu">
+          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="IdRolMenu" ColumnName="IdRolMenu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sistemas">
+      <EntityTypeMapping TypeName="SGUModel.Sistemas">
+        <MappingFragment StoreEntitySet="Sistemas">
+          <ScalarProperty Name="IdSistema" ColumnName="IdSistema" />
+          <ScalarProperty Name="vNombre" ColumnName="vNombre" />
+          <ScalarProperty Name="vDescripcion" ColumnName="vDescripcion" />
+          <ScalarProperty Name="nEstado" ColumnName="nEstado" />
+          <ScalarProperty Name="bOperacion" ColumnName="bOperacion" />
+          <ScalarProperty Name="vResumen" ColumnName="vResumen" />
+          <ScalarProperty Name="vUrl" ColumnName="vUrl" />
+          <ScalarProperty Name="vImagen" ColumnName="vImagen" />
+          <ScalarProperty Name="nTipo" ColumnName="nTipo" />
+          <ScalarProperty Name="bPortal" ColumnName="bPortal" />
+          <ScalarProperty Name="bAdmin" ColumnName="bAdmin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ubigeo">
+      <EntityTypeMapping TypeName="SGUModel.Ubigeo">
+        <MappingFragment StoreEntitySet="Ubigeo">
+          <ScalarProperty Name="IdUbigeo" ColumnName="IdUbigeo" />
+          <ScalarProperty Name="vDepartamento" ColumnName="vDepartamento" />
+          <ScalarProperty Name="vProvincia" ColumnName="vProvincia" />
+          <ScalarProperty Name="vDistrito" ColumnName="vDistrito" />
+          <ScalarProperty Name="nEstado" ColumnName="nEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="SGUModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="vCodTrabajador" ColumnName="vCodTrabajador" />
+          <ScalarProperty Name="vNombre" ColumnName="vNombre" />
+          <ScalarProperty Name="vApePat" ColumnName="vApePat" />
+          <ScalarProperty Name="vCorreo" ColumnName="vCorreo" />
+          <ScalarProperty Name="vUsuario" ColumnName="vUsuario" />
+          <ScalarProperty Name="vPassword" ColumnName="vPassword" />
+          <ScalarProperty Name="nEstado" ColumnName="nEstado" />
+          <ScalarProperty Name="vApeMat" ColumnName="vApeMat" />
+          <ScalarProperty Name="bCambioPassword" ColumnName="bCambioPassword" />
+          <ScalarProperty Name="vIdJefatura" ColumnName="vIdJefatura" />
+          <ScalarProperty Name="nIdUsuario_Mod" ColumnName="nIdUsuario_Mod" />
+          <ScalarProperty Name="dFecha_Mod" ColumnName="dFecha_Mod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioEmpresa">
+      <EntityTypeMapping TypeName="SGUModel.UsuarioEmpresa">
+        <MappingFragment StoreEntitySet="UsuarioEmpresa">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="idLocal" ColumnName="idLocal" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioEstacion">
+      <EntityTypeMapping TypeName="SGUModel.UsuarioEstacion">
+        <MappingFragment StoreEntitySet="UsuarioEstacion">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdLocal" ColumnName="IdLocal" />
+          <ScalarProperty Name="IdEstacion" ColumnName="IdEstacion" />
+          <ScalarProperty Name="nIdUsuario" ColumnName="nIdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_SelLocalIdEmpresaUsuario" FunctionName="SGUModel.Store.usp_SelLocalIdEmpresaUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SGUModel.SelLocalIdEmpresaUsuario">
+          <ScalarProperty Name="idLocal" ColumnName="idLocal" />
+          <ScalarProperty Name="vDescripcion" ColumnName="vDescripcion" />
+          <ScalarProperty Name="vDireccion" ColumnName="vDireccion" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="nEstado" ColumnName="nEstado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SelMenuConstruir" FunctionName="SGUModel.Store.usp_SelMenuConstruir">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SGUModel.SelMenuConstruir">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
+          <ScalarProperty Name="idMenuPadre" ColumnName="idMenuPadre" />
+          <ScalarProperty Name="IdSistema" ColumnName="IdSistema" />
+          <ScalarProperty Name="vDescripcion" ColumnName="vDescripcion" />
+          <ScalarProperty Name="vNombreFormulario" ColumnName="vNombreFormulario" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SelUsuarioLogin" FunctionName="SGUModel.Store.usp_SelUsuarioLogin" />
+  </EntityContainerMapping>
+</Mapping>

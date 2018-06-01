@@ -1,0 +1,10 @@
+D:\Desarrollo\WCF_SGO\WCF_SGO\ConsoleAppTest\bin\Debug\ConsoleAppTest.exe.config
+D:\Desarrollo\WCF_SGO\WCF_SGO\ConsoleAppTest\bin\Debug\ConsoleAppTest.exe
+D:\Desarrollo\WCF_SGO\WCF_SGO\ConsoleAppTest\bin\Debug\ConsoleAppTest.pdb
+D:\Desarrollo\WCF_SGO\WCF_SGO\ConsoleAppTest\bin\Debug\EntityFramework.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\ConsoleAppTest\bin\Debug\EntityFramework.SqlServer.dll
+D:\Desarrollo\WCF_SGO\WCF_SGO\ConsoleAppTest\bin\Debug\EntityFramework.xml
+D:\Desarrollo\WCF_SGO\WCF_SGO\ConsoleAppTest\bin\Debug\EntityFramework.SqlServer.xml
+D:\Desarrollo\WCF_SGO\WCF_SGO\ConsoleAppTest\obj\Debug\ConsoleAppTest.exe
+D:\Desarrollo\WCF_SGO\WCF_SGO\ConsoleAppTest\obj\Debug\ConsoleAppTest.pdb
+D:\Desarrollo\WCF_SGO\WCF_SGO\ConsoleAppTest\obj\Debug\ConsoleAppTest.csprojResolveAssemblyReference.cache

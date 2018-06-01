@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SGO_WCF.SGOTouch.Services.CertificadoVSP" CodeBehind="CertificadoVSP.svc.cs" %>

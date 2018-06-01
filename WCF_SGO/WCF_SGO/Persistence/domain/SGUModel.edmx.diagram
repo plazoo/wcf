@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7f9025c72a8a432da4c639a6aa643f74" Name="SGUDiagram">
+        <EntityTypeShape EntityType="SGUModel.Empresa" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGUModel.Estacion" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGUModel.Jefatura" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGUModel.JefaturaCorreo" Width="1.5" PointX="7.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGUModel.Local" Width="1.5" PointX="8.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGUModel.Menu" Width="1.5" PointX="13" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGUModel.NotCheckConnect" Width="1.5" PointX="9.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGUModel.Opciones" Width="1.5" PointX="13" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGUModel.OpcionMenu" Width="1.5" PointX="15.25" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGUModel.PermitsConnection" Width="1.5" PointX="10.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGUModel.Rol" Width="1.5" PointX="13" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGUModel.RolMenu" Width="1.5" PointX="15.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGUModel.Sistemas" Width="1.5" PointX="10.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGUModel.Ubigeo" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGUModel.Usuario" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGUModel.UsuarioEmpresa" Width="1.5" PointX="10.5" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGUModel.UsuarioEstacion" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="SGUModel.FK_Establecimiento_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.FK_UsuarioEmpresa_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.FK_UsuarioEstacion_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.R_1" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.R_3" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.FK_Establecimiento_Local" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.FK_Jefatura_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.FK_JefaturaCorreo_Jefatura" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.FK_JefaturaCorreo_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.FK_UsuarioEmpresa_Local" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.R_2" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.R_10" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.R_15" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.R_4" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.R_16" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.FK_Rol_Sistemas" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.R_11" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.FK_UsuarioEmpresa_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="SGUModel.FK_UsuarioEstacion_Usuario" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

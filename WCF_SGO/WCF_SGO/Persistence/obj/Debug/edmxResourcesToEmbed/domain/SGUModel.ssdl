@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SGUModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="vRazonSocial" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="vCodigoTributario" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="vDireccion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="vNombreComercial" Type="varchar" MaxLength="100" />
+    <Property Name="nEstado" Type="int" Nullable="false" />
+    <Property Name="IdUbigeo" Type="char" MaxLength="6" />
+    <Property Name="IdEmpresaSAP" Type="char" MaxLength="4" />
+    <Property Name="idSociedadSAP" Type="char" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="Estacion">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdLocal" />
+      <PropertyRef Name="IdEstacion" />
+    </Key>
+    <Property Name="IdEmpresa" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="IdLocal" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="IdEstacion" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="vDescripcion" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="nEstado" Type="int" Nullable="false" />
+    <Property Name="nIdUsuarioMod" Type="int" Nullable="false" />
+    <Property Name="dFechaMod" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Jefatura">
+    <Key>
+      <PropertyRef Name="IdJefatura" />
+    </Key>
+    <Property Name="IdJefatura" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="vDescripcion" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="bEstado" Type="bit" />
+    <Property Name="nIdUsuario_Mod" Type="int" Nullable="false" />
+    <Property Name="dFecha_Mod" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JefaturaCorreo">
+    <Key>
+      <PropertyRef Name="IdCorreo" />
+    </Key>
+    <Property Name="IdCorreo" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vIdJefatura" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="nIdUsuario" Type="int" Nullable="false" />
+    <Property Name="vTipo" Type="varchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Local">
+    <Key>
+      <PropertyRef Name="idLocal" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="idLocal" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="vDescripcion" Type="varchar" MaxLength="100" />
+    <Property Name="vDireccion" Type="varchar" MaxLength="200" />
+    <Property Name="IdEmpresa" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="nEstado" Type="int" />
+    <Property Name="IdUbigeo" Type="char" MaxLength="6" />
+    <Property Name="idLocalSGA" Type="char" MaxLength="2" />
+    <Property Name="idLocalGrupoSam" Type="char" MaxLength="2" />
+    <Property Name="idLocalConta" Type="char" MaxLength="2" />
+    <Property Name="nTipoLocal" Type="int" />
+    <Property Name="Ruta_DBF_Canjes" Type="varchar" MaxLength="250" />
+    <Property Name="IdLocalSAP" Type="char" MaxLength="4" />
+    <Property Name="vAliasLocalSAP" Type="varchar" MaxLength="2" />
+    <Property Name="vRuta_DBF_Casino" Type="varchar" MaxLength="100" />
+    <Property Name="vRuta_Movimiento_Casino" Type="varchar" MaxLength="100" />
+    <Property Name="idLocalExistencia_SGA" Type="varchar" MaxLength="2" />
+    <Property Name="vNombre_DBF_Casino" Type="varchar" MaxLength="100" />
+    <Property Name="IdLocalSAPStock" Type="varchar" MaxLength="4" />
+    <Property Name="vRuta_Sorteo_Casino" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="IdMenu" />
+    </Key>
+    <Property Name="IdMenu" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="IdSistema" Type="int" Nullable="false" />
+    <Property Name="idMenuPadre" Type="char" MaxLength="5" />
+    <Property Name="vDescripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="vNombreFormulario" Type="varchar" MaxLength="100" />
+    <Property Name="nEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="NotCheckConnect">
+    <Key>
+      <PropertyRef Name="IdNotCheckConnect" />
+    </Key>
+    <Property Name="IdNotCheckConnect" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vNombre" Type="varchar" MaxLength="60" />
+    <Property Name="vDescripcion" Type="varchar" MaxLength="100" />
+    <Property Name="nEstado" Type="int" />
+    <Property Name="vObservacion" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Opciones">
+    <Key>
+      <PropertyRef Name="IdOpcion" />
+    </Key>
+    <Property Name="IdOpcion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vDescripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="vNombre" Type="varchar" MaxLength="100" />
+    <Property Name="nEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OpcionMenu">
+    <Key>
+      <PropertyRef Name="IdOpcionMenu" />
+    </Key>
+    <Property Name="IdOpcionMenu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdMenu" Type="char" MaxLength="5" />
+    <Property Name="IdOpcion" Type="int" />
+  </EntityType>
+  <EntityType Name="PermitsConnection">
+    <Key>
+      <PropertyRef Name="IdPermitsConnection" />
+    </Key>
+    <Property Name="IdPermitsConnection" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vNombre" Type="varchar" MaxLength="100" />
+    <Property Name="vObservacion" Type="varchar" MaxLength="200" />
+    <Property Name="nEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="IdRol" />
+    </Key>
+    <Property Name="IdRol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vDescripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="nEstado" Type="int" Nullable="false" />
+    <Property Name="IdRolPadre" Type="int" />
+    <Property Name="IdSistema" Type="int" />
+  </EntityType>
+  <EntityType Name="RolMenu">
+    <Key>
+      <PropertyRef Name="IdRolMenu" />
+    </Key>
+    <Property Name="IdMenu" Type="char" MaxLength="5" />
+    <Property Name="IdRol" Type="int" />
+    <Property Name="IdRolMenu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SGU.dbo.RolOpcionMenu' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="RolOpcionMenu">
+          <Property Name="IdRol" Type="int" />
+          <Property Name="IdOpcionMenu" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SGU.dbo.RolUsuario' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="RolUsuario">
+          <Property Name="IdUsuario" Type="int" />
+          <Property Name="IdRol" Type="int" />
+        </EntityType>-->
+  <EntityType Name="Sistemas">
+    <Key>
+      <PropertyRef Name="IdSistema" />
+    </Key>
+    <Property Name="IdSistema" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vNombre" Type="varchar" MaxLength="100" />
+    <Property Name="vDescripcion" Type="varchar" MaxLength="200" />
+    <Property Name="nEstado" Type="int" />
+    <Property Name="bOperacion" Type="bit" />
+    <Property Name="vResumen" Type="varchar" MaxLength="150" />
+    <Property Name="vUrl" Type="varchar" MaxLength="150" />
+    <Property Name="vImagen" Type="varchar" MaxLength="150" />
+    <Property Name="nTipo" Type="int" />
+    <Property Name="bPortal" Type="bit" />
+    <Property Name="bAdmin" Type="bit" />
+  </EntityType>
+  <EntityType Name="Ubigeo">
+    <Key>
+      <PropertyRef Name="IdUbigeo" />
+    </Key>
+    <Property Name="IdUbigeo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="vDepartamento" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="vProvincia" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="vDistrito" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="nEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vCodTrabajador" Type="varchar" MaxLength="6" />
+    <Property Name="vNombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="vApePat" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="vCorreo" Type="varchar" MaxLength="100" />
+    <Property Name="vUsuario" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="vPassword" Type="varchar(max)" Nullable="false" />
+    <Property Name="nEstado" Type="int" Nullable="false" />
+    <Property Name="vApeMat" Type="varchar" MaxLength="100" />
+    <Property Name="bCambioPassword" Type="bit" />
+    <Property Name="vIdJefatura" Type="varchar" MaxLength="3" />
+    <Property Name="nIdUsuario_Mod" Type="int" />
+    <Property Name="dFecha_Mod" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UsuarioEmpresa">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="idLocal" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="idLocal" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="IdEmpresa" Type="char" MaxLength="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsuarioEstacion">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdLocal" />
+      <PropertyRef Name="IdEstacion" />
+      <PropertyRef Name="nIdUsuario" />
+    </Key>
+    <Property Name="IdEmpresa" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="IdLocal" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="IdEstacion" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="nIdUsuario" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Establecimiento_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="Estacion" Type="Self.Estacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Estacion">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Establecimiento_Local">
+    <End Role="Local" Type="Self.Local" Multiplicity="1" />
+    <End Role="Estacion" Type="Self.Estacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Local">
+        <PropertyRef Name="idLocal" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Estacion">
+        <PropertyRef Name="IdLocal" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Jefatura_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Jefatura" Type="Self.Jefatura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Jefatura">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JefaturaCorreo_Jefatura">
+    <End Role="Jefatura" Type="Self.Jefatura" Multiplicity="1" />
+    <End Role="JefaturaCorreo" Type="Self.JefaturaCorreo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jefatura">
+        <PropertyRef Name="IdJefatura" />
+      </Principal>
+      <Dependent Role="JefaturaCorreo">
+        <PropertyRef Name="vIdJefatura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JefaturaCorreo_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="JefaturaCorreo" Type="Self.JefaturaCorreo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="JefaturaCorreo">
+        <PropertyRef Name="nIdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rol_Sistemas">
+    <End Role="Sistemas" Type="Self.Sistemas" Multiplicity="0..1" />
+    <End Role="Rol" Type="Self.Rol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sistemas">
+        <PropertyRef Name="IdSistema" />
+      </Principal>
+      <Dependent Role="Rol">
+        <PropertyRef Name="IdSistema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+error 6004: The table 'SGU.dbo.RolOpcionMenu' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_RolOpcionMenu_OpcionMenu" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'SGU.dbo.RolOpcionMenu' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_RolOpcionMenu_Rol" />-->
+  <Association Name="FK_UsuarioEmpresa_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="UsuarioEmpresa" Type="Self.UsuarioEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="UsuarioEmpresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioEmpresa_Local">
+    <End Role="Local" Type="Self.Local" Multiplicity="1" />
+    <End Role="UsuarioEmpresa" Type="Self.UsuarioEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Local">
+        <PropertyRef Name="idLocal" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="UsuarioEmpresa">
+        <PropertyRef Name="idLocal" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioEmpresa_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="UsuarioEmpresa" Type="Self.UsuarioEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioEmpresa">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioEstacion_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="UsuarioEstacion" Type="Self.UsuarioEstacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="UsuarioEstacion">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioEstacion_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="UsuarioEstacion" Type="Self.UsuarioEstacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioEstacion">
+        <PropertyRef Name="nIdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_1">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="Local" Type="Self.Local" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Local">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_10">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="0..1" />
+    <End Role="RolMenu" Type="Self.RolMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="IdMenu" />
+      </Principal>
+      <Dependent Role="RolMenu">
+        <PropertyRef Name="IdMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_11">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="0..1" />
+    <End Role="RolMenu" Type="Self.RolMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="RolMenu">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_15">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="0..1" />
+    <End Role="OpcionMenu" Type="Self.OpcionMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="IdMenu" />
+      </Principal>
+      <Dependent Role="OpcionMenu">
+        <PropertyRef Name="IdMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_16">
+    <End Role="Opciones" Type="Self.Opciones" Multiplicity="0..1" />
+    <End Role="OpcionMenu" Type="Self.OpcionMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Opciones">
+        <PropertyRef Name="IdOpcion" />
+      </Principal>
+      <Dependent Role="OpcionMenu">
+        <PropertyRef Name="IdOpcion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_2">
+    <End Role="Ubigeo" Type="Self.Ubigeo" Multiplicity="0..1" />
+    <End Role="Local" Type="Self.Local" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ubigeo">
+        <PropertyRef Name="IdUbigeo" />
+      </Principal>
+      <Dependent Role="Local">
+        <PropertyRef Name="IdUbigeo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+error 6004: The table 'SGU.dbo.RolUsuario' is referenced by a relationship, but cannot be found.
+        <Association Name="R_23" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'SGU.dbo.RolUsuario' is referenced by a relationship, but cannot be found.
+        <Association Name="R_24" />-->
+  <Association Name="R_3">
+    <End Role="Ubigeo" Type="Self.Ubigeo" Multiplicity="0..1" />
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ubigeo">
+        <PropertyRef Name="IdUbigeo" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="IdUbigeo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_4">
+    <End Role="Sistemas" Type="Self.Sistemas" Multiplicity="1" />
+    <End Role="Menu" Type="Self.Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sistemas">
+        <PropertyRef Name="IdSistema" />
+      </Principal>
+      <Dependent Role="Menu">
+        <PropertyRef Name="IdSistema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="usp_SelLocalIdEmpresaUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEmpresa" Type="varchar" Mode="In" />
+    <Parameter Name="IdUsuario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_SelMenuConstruir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="int" Mode="In" />
+    <Parameter Name="IdSistema" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_SelUsuarioLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vUsuario" Type="varchar" Mode="In" />
+    <Parameter Name="vpassword" Type="varchar(max)" Mode="In" />
+    <Parameter Name="nIdSistema" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="SGUModelStoreContainer">
+    <EntitySet Name="Empresa" EntityType="Self.Empresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Estacion" EntityType="Self.Estacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Jefatura" EntityType="Self.Jefatura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JefaturaCorreo" EntityType="Self.JefaturaCorreo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Local" EntityType="Self.Local" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NotCheckConnect" EntityType="Self.NotCheckConnect" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Opciones" EntityType="Self.Opciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OpcionMenu" EntityType="Self.OpcionMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PermitsConnection" EntityType="Self.PermitsConnection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RolMenu" EntityType="Self.RolMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sistemas" EntityType="Self.Sistemas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ubigeo" EntityType="Self.Ubigeo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsuarioEmpresa" EntityType="Self.UsuarioEmpresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsuarioEstacion" EntityType="Self.UsuarioEstacion" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Establecimiento_Empresa" Association="Self.FK_Establecimiento_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Estacion" EntitySet="Estacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Establecimiento_Local" Association="Self.FK_Establecimiento_Local">
+      <End Role="Local" EntitySet="Local" />
+      <End Role="Estacion" EntitySet="Estacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Jefatura_Usuario" Association="Self.FK_Jefatura_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Jefatura" EntitySet="Jefatura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JefaturaCorreo_Jefatura" Association="Self.FK_JefaturaCorreo_Jefatura">
+      <End Role="Jefatura" EntitySet="Jefatura" />
+      <End Role="JefaturaCorreo" EntitySet="JefaturaCorreo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JefaturaCorreo_Usuario" Association="Self.FK_JefaturaCorreo_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="JefaturaCorreo" EntitySet="JefaturaCorreo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_Sistemas" Association="Self.FK_Rol_Sistemas">
+      <End Role="Sistemas" EntitySet="Sistemas" />
+      <End Role="Rol" EntitySet="Rol" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioEmpresa_Empresa" Association="Self.FK_UsuarioEmpresa_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="UsuarioEmpresa" EntitySet="UsuarioEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioEmpresa_Local" Association="Self.FK_UsuarioEmpresa_Local">
+      <End Role="Local" EntitySet="Local" />
+      <End Role="UsuarioEmpresa" EntitySet="UsuarioEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioEmpresa_Usuario" Association="Self.FK_UsuarioEmpresa_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="UsuarioEmpresa" EntitySet="UsuarioEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioEstacion_Empresa" Association="Self.FK_UsuarioEstacion_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="UsuarioEstacion" EntitySet="UsuarioEstacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioEstacion_Usuario" Association="Self.FK_UsuarioEstacion_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="UsuarioEstacion" EntitySet="UsuarioEstacion" />
+    </AssociationSet>
+    <AssociationSet Name="R_1" Association="Self.R_1">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Local" EntitySet="Local" />
+    </AssociationSet>
+    <AssociationSet Name="R_10" Association="Self.R_10">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="RolMenu" EntitySet="RolMenu" />
+    </AssociationSet>
+    <AssociationSet Name="R_11" Association="Self.R_11">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="RolMenu" EntitySet="RolMenu" />
+    </AssociationSet>
+    <AssociationSet Name="R_15" Association="Self.R_15">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="OpcionMenu" EntitySet="OpcionMenu" />
+    </AssociationSet>
+    <AssociationSet Name="R_16" Association="Self.R_16">
+      <End Role="Opciones" EntitySet="Opciones" />
+      <End Role="OpcionMenu" EntitySet="OpcionMenu" />
+    </AssociationSet>
+    <AssociationSet Name="R_2" Association="Self.R_2">
+      <End Role="Ubigeo" EntitySet="Ubigeo" />
+      <End Role="Local" EntitySet="Local" />
+    </AssociationSet>
+    <AssociationSet Name="R_3" Association="Self.R_3">
+      <End Role="Ubigeo" EntitySet="Ubigeo" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="R_4" Association="Self.R_4">
+      <End Role="Sistemas" EntitySet="Sistemas" />
+      <End Role="Menu" EntitySet="Menu" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

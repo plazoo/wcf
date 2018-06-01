@@ -1,0 +1,782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23C3D965-AE2D-4644-B608-CC539C92A6E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Persistence</RootNamespace>
+    <AssemblyName>Persistence</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="domain\AREA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\BANCO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CAJACHICA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CAJACHICA_CIERRE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CAJACHICA_SALDO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CAJACHICA_TIPODOCUMENTO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CARGO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CATALOGO_CUENTA_CONTABLE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CBANCO_TRABAJADOR.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CERTIFICADO_SALDO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CERTIFICADO_SALDO_HISTORY.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CERTIFICADO_VSP.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CIERRE_ANUAL.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CIERRE_CONTRATO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CIERRE_GUIAINGRESO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CIERRE_KARDEX.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CIERRE_LIQUIDACION.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CIERRE_OTORGADO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CIERRE_SERVICIO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CLIENTE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\ClienteExiste.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CLIENTEINHABILITADO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CLIENTE_BANCO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CLIENTE_CERTIFICADO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CLIENTE_CONTACTO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CLIENTE_COSECHA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CLIENTE_GARANTIA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CLIENTE_LIMITE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\ComprobanteCliente.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\ComprobanteVenta.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\ComprobanteVentaFilePorId.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\COMPROBANTEVENTA_APROBACION.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\COMPROBANTEVENTA_FILE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\COMPROBANTEVENTA_FILE_RESPONSE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\COMPROBANTEVENTA_PROCESO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\COMPROBANTE_VENTA_CAB.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\COMPROBANTE_VENTA_DET.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CONTRATO_COMPRA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CONTRATO_COMPRA_HISTORICO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CONTRATO_COMPRA_SWITCH.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CONTRATO_COMPRA_UNFIXED.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CONTRATO_COMPRA_ZONA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CONTRATO_ZONA_OUT.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CONTRATO_ZONA_SWITCH.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CONTRATO_ZONA_UNFIXED.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CORREO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\CUENTA_BANCO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\DEPARTAMENTO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\DISTRITO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\DOCUMENTO_OPERACION.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\Empresa.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\ERRORINVOICE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\Estacion.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\ESTADO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\GASTO_APROBACION.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\GASTO_CENTRO_COSTO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\GASTO_MOVILIDAD_CAB.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\GASTO_MOVILIDAD_DET.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\GASTO_PRP_CAB.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\GASTO_PRP_DET.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\GASTO_RECIBO_MOVILIDAD.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\GUIA_INGRESO_CAB.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\GUIA_INGRESO_CAB_BK.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\GUIA_INGRESO_DET.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\GUIA_INGRESO_DET_BK.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\GUIA_INGRESO_SALDO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\GUIA_INGRESO_SALDO_BK.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\IDIOMA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\Jefatura.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\JefaturaCorreo.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\LABORATORIO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\LABORATORIO_DEFECTO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\LABORATORIO_REFERENCIA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\LIQUIDACION_COMPRA_CAB.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\LIQUIDACION_COMPRA_DET.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\LIQUIDACION_COMPRA_SALDO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\LisClienteContacto.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\LisDatosGeneraCodigoBarra.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\Local.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\Menu.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\MODULO_COMPARTIDO_USUARIO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\MOTIVO_VISITA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\NotCheckConnect.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\ODCS_ESTADOS.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\ODCS_HISTORICO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\ODCS_PROVEEDOR.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\ODCS_PROVEEDOR_BANCO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\Opciones.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\OpcionMenu.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\ORDEN_COMPRA_CAB.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\ORDEN_COMPRA_DET.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\OTORGADO_SALDO_INICIAL.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\OTORGADO_ZONA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\OTORGADO_ZONA_BK.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\OTORGADO_ZONA_DET.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\PARAMETRO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\PermitsConnection.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\PRECIO_BOLSA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\PRECIO_DIA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\PROVINCIA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\REGION.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\RESUMEN_COMPRA_CLIENTE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\RESUMEN_COMPRA_CLIENTE_DETALLE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\RESUMEN_COMPRA_CLIENTE_DETALLE_TEMP.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\RESUMEN_COMPRA_CLIENTE_TEMP.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\Rol.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\RolMenu.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\SelLocalIdEmpresaUsuario.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\SelMenuConstruir.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\SelUsuarioLogin.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\SERVICIO_PRP_CABECERA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\SERVICIO_PRP_CABECERA_BK.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\SERVICIO_PRP_DETALLE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\SERVICIO_PRP_ELIMINADO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\SERVICIO_PRP_RESULTADO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\SGOModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGOModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\SGOModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\SGOModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGOModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="domain\SGUModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGUModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\SGUModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\SGUModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGUModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="domain\Sistemas.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\SITUACION_HIPOTECA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\SOLICITUD_VISITA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TBL_ARCHIVO_CARGAMASIVA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TBL_LOG.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\tbl_prueba.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TICKET_PESADA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TICKET_PESADA_BK.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_AGENTE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_ARBITRAJE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_BLACKLIST.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_CAFE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_CAJA_CHICA_ZONA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_CALIDAD.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_CALIDAD_LABORATORIO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_CALIDAD_PRECIO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_CAMBIO_OPERACION.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_CLIENTE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_COMPRA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_COND_PAGO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_CONTROL_BASE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_COSECHA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_DEFECTO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_DESTINO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_DIFERENCIAL.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_DOCUMENTO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_DSA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_ESTADO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_FIJADOR.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_GARANTIA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_INMUEBLE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_MES_FIJACION.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_MODALIDAD_OTORGADO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_MONEDA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_MOTIVO_OTORGADO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_ORIGEN.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_PRECIO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_REGLAS_PESO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_RENDIMIENTO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_RUMA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_SACO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_SEGUNDA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_SERIE_COMPRA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_SERIE_VENTA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_SERVICIO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_TAZA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_TERMINO_ENTREGA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_TITULO_VALOR.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_TRADER.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_UNIDAD_MEDIDA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_VALUACION.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TIPO_VISITA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TRABAJADOR_PRP.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TRABAJADOR_PRP_JEFATURA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TRASLADO_CAB.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TRASLADO_CHOFER.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TRASLADO_DESPACHOCAFE.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TRASLADO_DET.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TRASLADO_EMPRESA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TRASLADO_MOTIVO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TRASLADO_SALDO.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\TRASLADO_ZONA.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\Ubigeo.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_CargaMasivaTxt_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_InsGuiaIngresoCabecera_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisBusquedaClienteFiltro_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisClienteContacto_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisComboSacoCafe_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisComprobanteCliente1_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisContratoConGI_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisDatoGuiaIngresoZona_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisGuiaIngresoDetalle_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisGuiaIngresoEditar_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisGuiaIngresoZona_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisIdComprobanteCliente1_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisIdComprobanteCliente_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisLaboratorioDisponibleXCliente_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisRecepcionGuiaRemisionZona_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisSaldoCertificado_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_ListadoDetalleRemision_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisTickedPesadaEnProceso_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisTicketPesada_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_ListIngresoSaldo_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisTipoCafe_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_LisTipoRuma_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_Mant_CLIENTE_COSECHA_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_Mant_TIPO_COSECHA_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_ReporteGuiaIngreso_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\usp_ReporteTicketPesada_Result.cs">
+      <DependentUpon>SGOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\Usuario.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\UsuarioEmpresa.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="domain\UsuarioEstacion.cs">
+      <DependentUpon>SGUModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="domain\SGOModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SGOModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="domain\SGOModel.edmx.diagram">
+      <DependentUpon>SGOModel.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="domain\SGUModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SGUModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="domain\SGUModel.edmx.diagram">
+      <DependentUpon>SGUModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="domain\SGOModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SGOModel.Context.cs</LastGenOutput>
+      <DependentUpon>SGOModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="domain\SGOModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SGOModel.edmx</DependentUpon>
+      <LastGenOutput>SGOModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="domain\SGUModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SGUModel.edmx</DependentUpon>
+      <LastGenOutput>SGUModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="domain\SGUModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SGUModel.edmx</DependentUpon>
+      <LastGenOutput>SGUModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="common\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

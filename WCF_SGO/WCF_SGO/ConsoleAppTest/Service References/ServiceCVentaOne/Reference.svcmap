@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2009cb0d-11cd-4606-956e-9958c20c9d00" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:63347/CVenta/ServiceCVenta.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceCVenta.disco" MetadataType="Disco" ID="6ef4d250-602d-47eb-927f-2388565b03e5" SourceId="1" SourceUrl="http://localhost:63347/CVenta/ServiceCVenta.svc?disco" />
+    <MetadataFile FileName="ServiceCVenta.xsd" MetadataType="Schema" ID="1222b4ec-905b-411b-8124-dbddca27d10c" SourceId="1" SourceUrl="http://localhost:63347/CVenta/ServiceCVenta.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceCVenta.wsdl" MetadataType="Wsdl" ID="89978eb4-dc18-4010-b5c7-f61556280cf7" SourceId="1" SourceUrl="http://localhost:63347/CVenta/ServiceCVenta.svc?wsdl" />
+    <MetadataFile FileName="ServiceCVenta1.xsd" MetadataType="Schema" ID="b168e491-4bae-4dd6-950d-d52b75d983fc" SourceId="1" SourceUrl="http://localhost:63347/CVenta/ServiceCVenta.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceCVenta2.xsd" MetadataType="Schema" ID="00c98dcf-5084-4992-83ce-96674ee7e06f" SourceId="1" SourceUrl="http://localhost:63347/CVenta/ServiceCVenta.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceCVenta3.xsd" MetadataType="Schema" ID="fe5a5add-178a-4171-8834-7467dc7fbe5b" SourceId="1" SourceUrl="http://localhost:63347/CVenta/ServiceCVenta.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
